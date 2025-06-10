@@ -1,15 +1,12 @@
-print("Enter your name:")
-name = input()
+print('Input a number')
 
-print("Enter your age:")
-age = int(input())
+num = int(input())
 
+if num % 4 == 0:
+    print('The number is multiple by four')
+elif num % 2 == 0:
+    print('The number is even')
+else:
+    print('The number is odd')
 
-currentYear = 2025
-
-calculate = currentYear - age + 100
-
-
-
-print(f"Hello this is your age{calculate}")
 
