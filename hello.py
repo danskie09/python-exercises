@@ -1,12 +1,14 @@
-print('Input a number')
+a = [1, 1, 2, 3, 5, 8, 13, 21, 34, 55, 89]
 
-num = int(input())
 
-if num % 4 == 0:
-    print('The number is multiple by four')
-elif num % 2 == 0:
-    print('The number is even')
-else:
-    print('The number is odd')
+
+filtered = [i for i in a if i < 5]
+
+newList = list(set(filtered))
+
+print(newList)
+
+
+
 
 
