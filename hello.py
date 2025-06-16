@@ -1,35 +1,29 @@
-rock = 1
-paper = 2
-scissors = 3
+import random
 
-p1score = 0
-p2score = 0
 
-gameOver = 3
+randNum = random.randint(1,9)
+guessCount = 0
 
-print("Rock = 1, Paper = 2, Scissors = 3")
 
 while True:
-    player1 = int(input("Player 1 - Enter your choice: "))
-    player2 = int(input("Player 2 - Enter your choice: "))
+    print("The random number is " + str(randNum))
+    guess = int(input("Guess the number from 1 -9 "))
+    guessCount += 1
+    if randNum == guess:
+        print("Nice one you got it right " + str(guessCount) + " is your number of  guesses")
+        command = input("Do you want to exit?? Y or N")
+        command.lower()
+        if command == "y":
+            break
 
-    if player1 == player2:
-        print("It's a tie!")
-    elif (player1 == rock and player2 == scissors) or \
-         (player1 == paper and player2 == rock) or \
-         (player1 == scissors and player2 == paper):
-        p1score += 1
-        if p1score == gameOver:
-            print("Player 1 is the Champion")
-
-        print("Player 1 wins!" + str(p1score))
+    elif guess > randNum:
+        print("So Cold")
     else:
+        print("So Hot")
 
-        p2score += 1
-        if p2score == gameOver:
-            print("Player 2 is the champion")
-        print("Player 2 wins! " + str(p2score))
 
-    command = input("Do you want to exit? (Yes/No): ")
-    if command.lower() == "yes":
-        break
+
+
+
+
+
